@@ -11,6 +11,8 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
+<div class="container">
+
  <center>
  Been out tonight?<p>
  Was it good?<p>
@@ -23,6 +25,7 @@
 <input type="submit" value="Submit" />
 </form>
 </center>
+</div>
 
 </body>
 </html>
