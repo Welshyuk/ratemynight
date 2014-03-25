@@ -82,5 +82,18 @@
   <input type="text" class="form-control">
   <span class="input-group-addon">.00</span>
 </div>
+
+<ul class="nav nav-tabs">
+  ...
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      Dropdown <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      ...
+    </ul>
+  </li>
+  ...
+</ul>
     </body>
     </html>
