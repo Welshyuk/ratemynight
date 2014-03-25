@@ -11,7 +11,7 @@
 
      $app_id = "140232999331581";
 
-     $canvas_page = "http://welshy.me.uk/apps/rate_my_night/index.php";
+     $canvas_page = "http://welshy.me.uk/apps/ratemynight/index.php";
 
      $auth_url = "http://www.facebook.com/dialog/oauth?client_id=" 
             . $app_id . "&redirect_uri=" . urlencode($canvas_page) . "&scope=";
@@ -32,7 +32,7 @@
  <center>
  Been out tonight?<p>
  Was it good?<p>
- Choose your rating below<p><p>
+ Choose your rating below - pew pew<p><p>
  <form action="rating.php" method="get">
  <input type="checkbox" name="awesome" value="Awesome" /> Awesome<br />
 <input type="checkbox" name="pass" value="Pass" /> Pass<br />
