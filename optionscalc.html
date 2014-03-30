@@ -5,16 +5,10 @@
 <title>Payment Options Calculator</title>
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-</head>
+<style> 
 
-<style type="text/css">
-<body
-}
-.border-left-radius(@radius) {
-  border-bottom-left-radius: @radius;
-     border-top-left-radius: @radius;
-}
-}
+</style>
+</head>
 
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -26,64 +20,65 @@ var base = 0.00;
 
 //calculate the amount of payments
 
-if (fullBalance.value < 500.00)
-	{
-	base = 2;
-	}
-	if (fullBalance.value >= 500.00)
-	{
-	base = 2;
-	}
-	if (fullBalance.value >= 800.00)
-	{
-	base = 3;
-	}
-	if (fullBalance.value >= 1200.00)
-	{
-	base = 4;
-	}
-	if (fullBalance.value >= 1500.00)
-	{
-	base = 5;
-	}
-		
-document.getElementById("basediv").value = base;
-document.getElementById("amountOfPayments").value = fullBalance.value / basediv.value;
+	if (fullBalance.value < 500.00)
+		{
+		base = 2;
+		}
+		if (fullBalance.value >= 500.00)
+		{
+		base = 2;
+		}
+		if (fullBalance.value >= 800.00)
+		{
+		base = 3;
+		}
+		if (fullBalance.value >= 1200.00)
+		{
+		base = 4;
+		}
+		if (fullBalance.value >= 1500.00)
+		{
+		base = 5;
+		}
+			
+	document.getElementById("basediv").value = base;
+	document.getElementById("amountOfPayments").value = fullBalance.value / basediv.value;
 
-//calculate the dc fee
+	//calculate the dc fee
 
-if (amountOfPayments.value < 48.00)
-	{
-	dcFee = 2.50;
-	}
-	if (amountOfPayments.value >= 48.00)
-	{
-	dcFee = 3.50;
-	}
-	if (amountOfPayments.value >= 97.00)
-	{
-	dcFee = 7.00;
-	}
-	if (amountOfPayments.value >= 194.00)
-	{
-	dcFee = 10.50;
-	}
-	if (amountOfPayments.value >= 290.00)
-	{
-	dcFee = 14.00;
-	}
-	if (amountOfPayments.value >= 387.00)
-	{
-	dcFee = 17.50;
-	}
+	if (amountOfPayments.value < 48.00)
+		{
+		dcFee = 2.50;
+		}
+		if (amountOfPayments.value >= 48.00)
+		{
+		dcFee = 3.50;
+		}
+		if (amountOfPayments.value >= 97.00)
+		{
+		dcFee = 7.00;
+		}
+		if (amountOfPayments.value >= 194.00)
+		{
+		dcFee = 10.50;
+		}
+		if (amountOfPayments.value >= 290.00)
+		{
+		dcFee = 14.00;
+		}
+		if (amountOfPayments.value >= 387.00)
+		{
+		dcFee = 17.50;
+		}
 
-document.getElementById("dcFee").value = dcFee;
-document.getElementById("totalPaymentAmount").value = +amountOfPayments.value + +dcFee;
-document.getElementById("outputText").value = totalPaymentAmount.value ;
+	document.getElementById("dcFee").value = dcFee;
+	document.getElementById("totalPaymentAmount").value = +amountOfPayments.value + +dcFee;
+	document.getElementById("outputText").value = totalPaymentAmount.value ;
 
 }//closing function tag
-</script>
 
+</script>
+</br>
 <table>
 <td>
 </br>
@@ -108,7 +103,7 @@ document.getElementById("outputText").value = totalPaymentAmount.value ;
 	<label>CSV Text</label>
 	<input id = "outputText" class = "input-xlarge" type="number" size ="9" maxlength ="8" disabled>
 	</br>
-	<a href="javascript:optionsCalc()">Calculate</a>
+	<a href="javascript:optionsCalc()">Calculate</a></br>
 	</div>
 	</td>
 	</td>
