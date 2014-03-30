@@ -1,47 +1,106 @@
+<!--Adam "Welshy" Drake 2014-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Whatever</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Options Calculator</title>
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
+</br>
 
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
- 
-<div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">Home</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="">
-                <a href="./index.html">Home</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-		    <ul class="nav nav-tabs">
-    <li class="active">
-    <a href="#">Home</a>
-    </li>
-    <li><a href="#">...</a></li>
-    <li><a href="#">...</a></li>
-    </ul>
 
-<td>	
-<button class="btn" type="button">Next</button>
+<script type="text/javascript">
+function optionsCalc() {
+
+var base = 0.00;
+
+if (fullBalance.value < 500.00)
+	{
+	base = 2;
+	}
+	if (fullBalance.value >= 500.00)
+	{
+	base = 2;
+	}
+	if (fullBalance.value >= 800.00)
+	{
+	base = 3;
+	}
+	if (fullBalance.value >= 1200.00)
+	{
+	base = 4;
+	}
+	if (fullBalance.value >= 1500.00)
+	{
+	base = 5;
+	}
+		
+document.getElementById("basediv").value = base;
+document.getElementById("amountOfPayments").value = fullBalance.value / basediv.value;
+
+if (amountOfPayments.value < 48.00)
+	{
+	dcFee = 2.50;
+	}
+	if (amountOfPayments.value >= 48.00)
+	{
+	dcFee = 3.50;
+	}
+	if (amountOfPayments.value >= 97.00)
+	{
+	dcFee = 7.00;
+	}
+	if (amountOfPayments.value >= 194.00)
+	{
+	dcFee = 10.50;
+	}
+	if (amountOfPayments.value >= 290.00)
+	{
+	dcFee = 14.00;
+	}
+	if (amountOfPayments.value >= 387.00)
+	{
+	dcFee = 17.50;
+	}
+
+document.getElementById("dcFee").value = dcFee;
+document.getElementById("totalPaymentAmount").value = +amountOfPayments.value + +dcFee;
+document.getElementById("outputText").value = totalPaymentAmount.value ;
+
+}//closing function tag
+</script>
+
+<table>
+<td>
+</br>
 </td>
-
-
+	<td>
+	<div class="span8 offset2">
+	<label>Customer's Balance</label>
+    <input id = "fullBalance" class = "input-small" type="text" size ="9" maxlength ="8">
+	
+	<label>Number of Payments</label>
+	<input id = "basediv" class = "input-small" type="text" size ="9" maxlength ="8" disabled>
+	
+	<label>Single Payment Amount</label>
+	<input id = "amountOfPayments" class = "input-small" type="text" size ="9" maxlength ="8" disabled>
+	
+	<label>DC Fee</label>
+	<input id = "dcFee" class = "input-small" type="text" size ="9" maxlength ="8" disabled>
+	
+	<label>Total Single Payment Amount</label>
+	<input id = "totalPaymentAmount" class = "input-small" type="number" size ="9" maxlength ="8" disabled>
+	
+	<label>CSV Text</label>
+	<input id = "outputText" class = "input-xlarge" type="number" size ="9" maxlength ="8" disabled>
+	</br>
+	<a href="javascript:optionsCalc()">Calculate</a>
+	</div>
+	</td>
+	</td>
+ 	
 </body>
 </html>
