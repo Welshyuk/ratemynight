@@ -21,13 +21,13 @@ a {color:#04B486;}
 </div>
 
 <ul class="nav nav-tabs nav-justified" id="myTab">
-   <li class="active"><a href="#home" data-target="home" data-toggle="tab">Home</a></li>
-   <li><a href="#recent" data-target="recent" data-toggle="tab">My Rates</a></li>
-   <li><a href="#settings" data-target="settings" data-toggle="tab">Settings</a></li>
+   <li class="active"><a href="home" data-target="#home" data-toggle="tab">Home</a></li>
+   <li><a href="recent" data-target="#recent" data-toggle="tab">My Rates</a></li>
+   <li><a href="settings" data-target="#settings" data-toggle="tab">Settings</a></li>
 </ul>
 
-</head>
-<body>
+
+
 
 <div class="tab-content">
   <div class="tab-pane active" id="home">..1.</div>
@@ -44,6 +44,8 @@ a {color:#04B486;}
 		
 		
 </script>
+</head>
+<body>
 
 </body>
 </html>
