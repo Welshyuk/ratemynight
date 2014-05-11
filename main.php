@@ -2,6 +2,8 @@
       xmlns:fb="https://www.facebook.com/2008/fbml"> 
 <head>
   <title>Rate My Night</title>
+  <!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
 
