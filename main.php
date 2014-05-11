@@ -1,3 +1,5 @@
+<!--Adam "Welshy" Drake 2014-->
+
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"
       xmlns:fb="https://www.facebook.com/2008/fbml"> 
 <head>
@@ -11,6 +13,10 @@
 
 <style>
 a {color:#04B486;}
+
+#rating{
+ width:620px;   
+}
 
 </style>
 
@@ -34,9 +40,65 @@ a {color:#04B486;}
 		</ul>
 
 		<div class="tab-content">
-		  <div class="tab-pane active" id="home">..1.</div>
-		  <div class="tab-pane" id="recent">.2..</div>
-		  <div class="tab-pane" id="settings">.3..</div>
+		  <div align="left" class="tab-pane active" id="home">
+		  
+			  <form>
+				<select class="form-control" id="rating" align="center">
+				<option>Legendary</option>
+				<option>Epic</option>
+				<option>Awesome</option>
+				<option>Fail</option>
+				<option>Lame</option>
+				</select>
+			  <br />
+				<button type="file" class="btn btn-success btn-lg btn-block">Upload that photo</button><hr>
+				<button type="submit" class="btn btn-default btn-lg btn-block">Rate that night</button>
+			  </form>
+		  
+		  </div>
+		  <div class="tab-pane" id="recent">
+		  
+			<table class="table table-striped">
+			
+			 <tr>
+                <th></th>
+                <th>Date</th>
+                <th>Rating</th>
+                <th>Location</th>
+            </tr>
+			
+        </thead>
+        <tbody>
+			                 <tr>
+                <td></td>
+				<td>05/11/2014</td>
+				<td>Awesome</td>
+				<td><a href ="http://www.dennys.com/" target="_blank">Dennys</td>
+           
+            </tr>
+                                    <tr>
+    
+                <td></td>
+				<td>05/08/2014</td>
+				<td>Lame</td>
+				<td><a href ="http://www.rbc.com/" target="_blank">RBC</td>
+               
+            </tr>
+			
+			</tr>
+                                    <tr>
+    
+                <td></td>
+				<td>05/02/2014</td>
+				<td>Epic</td>
+				<td><a href ="http://www.starbucks.com/" target="_blank">Starbucks</td>
+               
+            </tr>
+			
+			</table>
+		  
+		  </div>
+		  <div class="tab-pane" id="settings">App settings go here</div>
 		</div>
 
 		<script>
@@ -44,8 +106,7 @@ a {color:#04B486;}
 			jQuery('#myTab a').on('click', function() {
 				$(this).tab('show');
 			});
-		})
-				
+		})	
 				
 		</script>
 </div>
